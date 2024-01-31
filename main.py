@@ -1,13 +1,17 @@
 class BooksCollector:
 
-    def __init__(self):
+    def __init__(self) -> object:
+        """
+
+        :rtype: object
+        """
         self.books_genre = {}
         self.favorites = []
         self.genre = ['Фантастика', 'Ужасы', 'Детективы', 'Мультфильмы', 'Комедии']
         self.genre_age_rating = ['Ужасы', 'Детективы']
 
     # добавляем новую книгу
-    def add_new_book(self, name):
+    def add_new_book(self, name: object) -> object:
         if not self.books_genre.get(name) and 0 < len(name) < 41:
             self.books_genre[name] = ''
 
@@ -17,7 +21,7 @@ class BooksCollector:
             self.books_genre[name] = genre
 
     # получаем жанр книги по её имени
-    def get_book_genre(self, name):
+    def get_book_genre(self, name: object) -> object:
         return self.books_genre.get(name)
 
     # выводим список книг с определённым жанром
